@@ -81,6 +81,21 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    @IBAction func onLogout(_ sender: Any) {
+        PFUser.logOutInBackground { (error) in
+            if let error = error{
+                print(error.localizedDescription)
+            }else{
+                print("Successful logout")
+                let main = UIStoryboard(name: "Main", bundle: nil)
+                let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
+                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                sceneDelegate.window?.rootViewController = loginViewController
+            }
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 

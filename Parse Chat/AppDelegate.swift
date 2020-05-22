@@ -20,14 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             configuration.applicationId = "CodePath-Parse"
             configuration.server = "http://45.79.67.127:1337/parse"
         }))
-        
-//        if let currentUser = PFUser.current(){
-//            print("Welcome back \(currentUser.username!) 😀")
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let appDelegate = UIApplication.shared.delegate
-//            appDelegate?.window??.rootViewController = storyboard
-//        }
-        
+
         return true
     }
 
@@ -44,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
+    
+    
 }
 

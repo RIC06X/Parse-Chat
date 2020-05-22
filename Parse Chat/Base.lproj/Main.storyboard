@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Parse_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Parse_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +134,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="kf7-ah-Ls0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="FDm-Wl-AsO"/>
+                    <navigationItem key="navigationItem" title="Chat" id="FDm-Wl-AsO">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="gPV-9t-mpI">
+                            <connections>
+                                <action selector="onLogout:" destination="V0P-UO-wZx" id="IO8-EC-ZNu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="chatMessageField" destination="HUg-7K-qha" id="O8x-tD-nak"/>
                         <outlet property="chatTableView" destination="FJM-09-sbJ" id="f5t-WO-C0z"/>
@@ -147,7 +153,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ib4-Vc-b0V">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mJM-zi-CMF" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="chatNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="mJM-zi-CMF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wip-wj-g6A">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
